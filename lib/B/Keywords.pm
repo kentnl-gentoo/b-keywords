@@ -6,13 +6,14 @@ use strict;
 
 require Exporter;
 *import = *import = \&Exporter::import;
+
 use vars qw( @EXPORT_OK %EXPORT_TAGS );
-@EXPORT_OK = qw( @Scalars @Arrays @Hashes @FileHandles @Symbols
-    @Functions @Barewords );
-%EXPORT_TAGS = ( ':all' => \@EXPORT_OK );
+@EXPORT_OK = qw( @Scalars @Arrays @Hashes @Filehandles @Symbols
+                 @Functions @Barewords );
+%EXPORT_TAGS = ( 'all' => \@EXPORT_OK );
 
 use vars '$VERSION';
-$VERSION = '1.08';
+$VERSION = '1.09';
 
 use vars '@Scalars';
 @Scalars = (
@@ -27,7 +28,7 @@ use vars '@Scalars';
         $. $INPUT_LINE_NUMBER $NR
         $/ $INPUT_RECORD_SEPARATOR $RS
         $| $OUTPUT_AUTO_FLUSH ), '$,', qw( $OUTPUT_FIELD_SEPARATOR $OFS
-        $OUTPUT_RECORD_SEPARATOR $ORS
+        $\ $OUTPUT_RECORD_SEPARATOR $ORS
         $" $LIST_SEPARATOR
         $; $SUBSCRIPT_SEPARATOR $SUBSEP
         ), '$#', qw( $OFMT
@@ -406,7 +407,7 @@ B::Keywords - Lists of reserved barewords and symbol names
 C<B::Keywords> supplies seven arrays of keywords: C<@Scalars>,
 C<@Arrays>, C<@Hashes>, C<@Filehandles>, C<@Symbols>, C<@Functions>,
 and C<@Barewords>. The C<@Symbols> array includes the contents of each
-of C<@Scalars>, C<@Arrays>, C<@Hashes>, and C<@Filehandles>.
+of C<@Scalars>, C<@Arrays>, C<@Hashes>, C<@Functions> and C<@Filehandles>.
 Similarly, C<@Barewords> adds a few non-function keywords and
 operators to the C<@Functions> array.
 
@@ -451,13 +452,51 @@ everything.
 keywords.pl from the perl source, L<perlvar>, L<perlfunc>,
 L<perldelta>.
 
-=head1 AUTHOR
 
-Joshua ben Jore <jjore@cpan.org>
+
+=head1 BUGS
+
+Please report any bugs or feature requests to C<bug-B-Keywords at
+rt.cpan.org>, or through the web interface at
+L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=B-Keywords>. I will be
+notified, and then you'll automatically be notified of progress on
+your bug as I make changes.
+
+=head1 SUPPORT
+
+You can find documentation for this module with the perldoc command.
+
+  perldoc B::Keywords
+
+You can also look for information at:
+
+=over
+
+=item * RT: CPAN's request tracker
+
+L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=B-Keywords>
+
+=item * AnnoCPAN: Annotated CPAN documentation
+
+L<http://annocpan.org/dist/B-Keywords>
+
+=item * CPAN Ratings
+
+L<http://cpanratings.perl.org/d/B-Keywords>
+
+=item * Search CPAN
+
+L<http://search.cpan.org/dist/B-Keywords>
+
+=back
+
+=head1 ACKNOWLEDGEMENTS
+
+Michael G Schwern for patches
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2007, Joshua ben Jore. All rights reserved.
+Copyright 2009 Joshua ben Jore, All rights reserved.
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of either:
@@ -466,3 +505,11 @@ a) the GNU General Public License as published by the Free Software
    Foundation; version 2, or
 
 b) the "Artistic License" which comes with Perl.
+
+=head1 SOURCE AVAILABILITY
+
+This source is in Github: L<git://github.com/jbenjore/b-keywords.git>
+
+=head1 AUTHOR
+
+Joshua ben Jore <jjore@cpan.org>
