@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.68.
+signed via the Module::Signature module, version 0.70.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,21 +14,26 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 376f341fb5c92b5bbe9b6b798b130e705b331567 Changes
+SHA1 4fd4f295bef51b341d005ff4c8853d81e9b59873 Changes
 SHA1 0e987cce2b4e94a4d6920e7353f8674a4462528a LICENSE
-SHA1 ed2ca90947f0eb71411fdc44939d9be8fb8aadfc MANIFEST
-SHA1 aa49172323ec06feb997b1d860c5d995373b9021 META.json
-SHA1 d2aa096b98279614a5309514f335447d21e77475 META.yml
-SHA1 7db998b9f11f26c92aa736d5fbfc7e2c631c146a Makefile.PL
+SHA1 46ec9231f2152e6fcf554de076272a1fc03e0a72 MANIFEST
+SHA1 2b446deddab81b5ed2712e17213c234d4beb78d9 META.json
+SHA1 3bee5f7a51f960701f21044adfd4e83c1a6a09cf META.yml
+SHA1 30135cfc198eb4d8eec4d5c35a1a1f23f19ebc00 Makefile.PL
 SHA1 a53710b3f8ae9645adcdf4bae864206b330c15af README
-SHA1 66ef8027d8fef458361993318c0b1f5761a9dc88 lib/B/Keywords.pm
+SHA1 ea460dfca2b97db341e7da3b18e1ef26b0a22a5b lib/B/Keywords.pm
 SHA1 26eebf3bf6177dc6fc7f91890c68c05b7a61fbe1 t/10basic.t
-SHA1 8f3cce01072e8854b0e4620cb3b338e8228c3ba4 t/11keywords.t
+SHA1 d977811d4f33d71a1b515fc6eb96d1bb4184bbd5 t/11keywords.t
 SHA1 e6872ebfbccb57ef102945ddd11d131453024ea3 t/export.t
+SHA1 a68085c94808f024eb2ed76ce73ea439f0ed6d48 t/z_kwalitee.t
+SHA1 993b3cef8c06a70d99829facf76140864eb57240 t/z_meta.t
+SHA1 ade48e2b6098a0a329312543e1451e7e7fb7bc5f t/z_perl_minimum_version.t
+SHA1 db4c7c6e1b7cf2bd96d86fa303fd2225b8bf8613 t/z_pod-coverage.t
+SHA1 c8aa3903d3aba84c19bbd94d677620c758fa07d5 t/z_pod.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.11 (GNU/Linux)
+Version: GnuPG v1.4.12 (GNU/Linux)
 
-iEYEARECAAYFAk80NncACgkQmm2SYo/9yUIDoACdF0JUk0iW04ZP5GP1oKhwX/mG
-PiMAn0AJGt4LcTuvXwqhFK3bFGzKU0Mj
-=ixp+
+iEYEARECAAYFAlFfMpEACgkQmm2SYo/9yULfGQCfXqmtTZRKDXwA9V7gfAjGzp/f
+GTcAnA/5fqAwLqsAqRx6GxCqkol7rPW7
+=mVku
 -----END PGP SIGNATURE-----
